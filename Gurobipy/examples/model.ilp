@@ -1,0 +1,10 @@
+\ Model _copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Minimize
+ 
+Subject To
+ Thu4: x[Cathy,Thu4] + x[Ed,Thu4] = 4
+Bounds
+ -infinity <= x[Cathy,Thu4] <= 1
+ -infinity <= x[Ed,Thu4] <= 1
+End

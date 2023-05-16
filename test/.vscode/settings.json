@@ -1,0 +1,4 @@
+{
+    "python.formatting.provider": "yapf",
+    "python.pythonPath": "/Users/xuning/workspace/python/venv/bin/python3.7"
+}
