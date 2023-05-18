@@ -19,7 +19,7 @@ Max_label_cost=99999#初始距离标签
 """导入网络数据文件，构建基础网络并初始化相关变量"""
 #读取网络节点数据
 #df_node=pd.read_csv('./input_file/node.csv')
-df_node=pd.read_csv(r'C:\Users\xuning\OneDrive\code\DEV-PYTHON\SPPRC\input_file\node.csv', delim_whitespace=True)
+df_node=pd.read_csv('./SPPRC/input_file/node.csv', delim_whitespace=True)
 df_node=df_node.iloc[:,:].values
 for i in range(len(df_node)):
     g_node_list.append(df_node[i,0])
@@ -34,8 +34,8 @@ node_label_cost=[Max_label_cost]*g_number_of_nodes
 node_predecessor[g_origin-1]=0
 node_label_cost[g_origin-1] = 0
 #读取网络弧数据
-#df_link=pd.read_csv('./input_file/road_link.csv', delim_whitespace=True)
-df_link=pd.read_csv(r'C:\Users\xuning\OneDrive\code\DEV-PYTHON\SPPRC\input_file\road_link.csv', delim_whitespace=True)
+#df_link=pd.read_csv(r'./input_file/road_link.csv', delim_whitespace=True)
+df_link=pd.read_csv('./SPPRC/input_file/road_link.csv', delim_whitespace=True)
 df_link=df_link.iloc[:,:].values
 for i in range(len(df_link)):
     g_link_list.append((df_link[i,1],df_link[i,2]))
@@ -77,4 +77,4 @@ for destination in g_node_list:
 g_shortest_path=np.array(g_shortest_path)
 col=['agent_id','o_zone_id','d_zone_id','node_sequence','distance']
 file_data = pd.DataFrame(g_shortest_path, index=range(len(g_shortest_path)),columns=col)
-file_data.to_csv(r'./1_generic_label_correcting/agent.csv', index=False)
+file_data.to_csv('./SPPRC/1_generic_label_correcting/agent.csv', index=False)

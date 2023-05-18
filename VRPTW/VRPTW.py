@@ -64,7 +64,7 @@ def readData(data, path, customerNum):
 
 #---读取数据
 data = Data()
-path = 'c101.txt' #读取算例数据集
+path = 'C:/Users/xuning/OneDrive/code/DEV-PYTHON/Gurobipy/c101.txt' #读取算例数据集
 customerNum = 100  #设置客户数量
 readData(data, path, customerNum)
 BigM = 100000
